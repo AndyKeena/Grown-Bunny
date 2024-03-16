@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Grown Bunny</string>
+    <string name="welcome_message">Welcome To</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="register_now">Don\'t have an account? Register</string>
+    <string name="log_in">LOG IN</string>
+    <string name="welcome_message_appname">GrownBunny</string>
+    <string name="password">Password\n</string>
+    <string name="email">Email</string>
+</resources>
