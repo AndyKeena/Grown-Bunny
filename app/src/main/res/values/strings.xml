@@ -4,7 +4,10 @@
     <string name="reset_password">Reset Password</string>
     <string name="register_now">Don\'t have an account? Register</string>
     <string name="log_in">LOG IN</string>
+    <string name="register">REGISTER</string>
     <string name="welcome_message_appname">GrownBunny</string>
     <string name="password">Password\n</string>
     <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password\n</string>
 </resources>
