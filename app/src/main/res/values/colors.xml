@@ -4,7 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_green">#7ED957</color>
     <color name="boarder_green">#116530</color>
-    <color name="lightblue">#A5DD9B </color>
+    <color name="lightgreen">#A5DD9B </color>
     <color name="blue">#0000FF</color>
     <color name="red">#E63425</color>
+    <color name="dark_brown">#2F1B12</color>
+    <color name="brown">#B3630A</color>
+    <color name="light_brown">#E5D3B3</color>
+    <color name="yellow">#E2D86F</color>
 </resources>

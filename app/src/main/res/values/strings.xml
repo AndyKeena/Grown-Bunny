@@ -10,4 +10,6 @@
     <string name="email">Email</string>
     <string name="name">Name</string>
     <string name="confirm_password">Confirm Password\n</string>
+    <string name="fertilizer_benefits">Fertilizer Benefits of Rabbit Droppings</string>
+    <string name="growth_prediction">Growth Prediction</string>
 </resources>
