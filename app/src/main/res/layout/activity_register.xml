@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_green">
-    <!--tools:context=".RegisterActivity">-->
+    android:background="@color/background_green"
+    tools:context=".RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="80dp"
         >
 
         <ImageView
             android:id="@+id/welcome_text_appname"
             android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:src="@drawable/app_name"
             android:textColor="@color/black"
             android:layout_gravity="center"/>
@@ -38,7 +39,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="20dp"
-            android:paddingEnd="20dp">
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp">
 
             <EditText
                 android:id="@+id/reg_name"
@@ -117,53 +119,51 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:textColor="@color/boarder_green"
-                android:text="* Minimum one Lowercase"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
-                android:id="@+id/txtLower"/>
+                android:id="@+id/password_error_text"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:textColor="@color/boarder_green"
-                android:text="* Minimum one uppercase"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:id="@+id/txtUpper"/>
+<!--            <TextView-->
+<!--                android:id="@+id/txtUpper"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:text="* Minimum one uppercase"-->
+<!--                android:textColor="@color/boarder_green"-->
+<!--                android:textSize="15sp" />-->
 
-            <TextView
-                android:id="@+id/txtNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:text="* Minimum one number"
-                android:textColor="@color/boarder_green"
-                android:textSize="15sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/txtNumber"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:text="* Minimum one number"-->
+<!--                android:textColor="@color/boarder_green"-->
+<!--                android:textSize="15sp" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:textColor="@color/boarder_green"
-                android:text="* At least 8 characters"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:id="@+id/txtChar"/>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@color/boarder_green"-->
+<!--                android:text="* At least 8 characters"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:id="@+id/txtChar"/>-->
 
             <Button
-                android:id="@+id/reg_btn"
+                android:id="@+id/register_btn"
                 android:layout_width="120dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:text="@string/register"
-                android:layout_marginTop="21dp"
+                android:layout_marginTop="30dp"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:background="@drawable/green_boarder_button"/>

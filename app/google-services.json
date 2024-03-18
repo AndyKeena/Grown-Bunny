@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "427349850749",
+    "project_id": "grown-bunny",
+    "storage_bucket": "grown-bunny.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427349850749:android:896a9a0c732daf2fb00f14",
+        "android_client_info": {
+          "package_name": "com.app.GrownBunny"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG5Jw7Ser-3-p5Fl2fL9x_xrixPYRO37g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
