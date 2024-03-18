@@ -20,6 +20,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -143,12 +144,14 @@ public class RegisterActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 String password = register_password.getText().toString();
                 String confirmPassword = confirm_password.getText().toString();
+                if (!password.isEmpty() && !confirmPassword.isEmpty()) {
 
-                if (password.equals(confirmPassword)) {
-                    register_btn.setEnabled(true);
-                } else {
-                    register_password.setEnabled(false);
-                    password_confirm_text.setError("Passwords doesn't match");
+                    if (password.equals(confirmPassword)) {
+                        register_btn.setEnabled(true);
+                    } else {
+                        register_btn.setEnabled(false);
+                        confirm_password.setError("Passwords doesn't match");
+                    }
                 }
             }
 
@@ -164,7 +167,7 @@ public class RegisterActivity extends AppCompatActivity {
             String name = binding.regName.getText().toString();
             String email = binding.regEmail.getText().toString();
             String user_password = binding.registerPassword.getText().toString();
-            String user_confirm_password = confirm_password.getText().toString();
+            String user_confirm_password = binding.confirmPassword.getText().toString();
 //            String mobile = binding.regMobile.getText().toString();
 
             // Checking if the fields are empty
@@ -174,7 +177,7 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             } else {
                 // Checking if the password and confirmation password are matching
-                if (register_password.equals(confirm_password)) {
+                if (user_password.equals(user_confirm_password)) {
                     // Checking if the email is already exists in the Firestore
                     Query query = ref.whereEqualTo("email", email);
                     query.get()
@@ -203,22 +206,22 @@ public class RegisterActivity extends AppCompatActivity {
                                             .addOnFailureListener(e -> Toast.makeText(RegisterActivity.this,
                                                     "Registration Failed", Toast.LENGTH_SHORT).show());
 
-                                    // Creating user in Firebase Authentication
-//                                    mAuth.createUserWithEmailAndPassword(email, user_password)
-//                                            .addOnCompleteListener(task -> {
-//                                                if (task.isSuccessful()) {
-//                                                    // Sign in success, update UI with the signed-in user's information
-//                                                    Toast.makeText(RegisterActivity.this, "Account Created.",
-//                                                            Toast.LENGTH_SHORT).show();
-//                                                    Objects.requireNonNull(mAuth.getCurrentUser()).sendEmailVerification().addOnCompleteListener(task1 -> Toast.makeText(RegisterActivity.this, "Please Verify account before login.",
-//                                                            Toast.LENGTH_LONG).show());
-//
-//                                                } else {
-//                                                    // If sign in fails, display a message to the user.
-//                                                    Toast.makeText(RegisterActivity.this, "Authentication failed.",
-//                                                            Toast.LENGTH_SHORT).show();
-//                                                }
-//                                            });
+                                   //  Creating user in Firebase Authentication
+                                    mAuth.createUserWithEmailAndPassword(email, user_password)
+                                            .addOnCompleteListener(task -> {
+                                                if (task.isSuccessful()) {
+                                                    // Sign in success, update UI with the signed-in user's information
+                                                    Toast.makeText(RegisterActivity.this, "Account Created.",
+                                                            Toast.LENGTH_SHORT).show();
+                                                    Objects.requireNonNull(mAuth.getCurrentUser()).sendEmailVerification().addOnCompleteListener(task1 -> Toast.makeText(RegisterActivity.this, "Please Verify account before login.",
+                                                            Toast.LENGTH_LONG).show());
+
+                                                } else {
+                                                    // If sign in fails, display a message to the user.
+                                                    Toast.makeText(RegisterActivity.this, "Authentication failed."+ task.getException().getMessage(),
+                                                            Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
                                 }
 
                                 // Open the LoginActivity
@@ -229,7 +232,7 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     // If passwords are not matching show an error
                     Toast.makeText(RegisterActivity.this,
-                            "Invalid Password", Toast.LENGTH_SHORT).show();
+                            "Passwords does not match", Toast.LENGTH_SHORT).show();
                 }
             }
         });
