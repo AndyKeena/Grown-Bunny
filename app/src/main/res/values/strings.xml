@@ -12,4 +12,16 @@
     <string name="confirm_password">Confirm Password\n</string>
     <string name="fertilizer_benefits">Fertilizer Benefits of Rabbit Droppings</string>
     <string name="growth_prediction">Growth Prediction</string>
+    <string name="disease_detection">Disease Detection</string>
+<!--    <string name="upload_image">Upload Image</string>-->
+    <string name="contact_vet">Connect Vet</string>
+    <string name="select_image">Select image</string>
+    <string name="use_camera_or_gallery">Use Camera or Select from Gallery</string>
+    <string name="symptoms">Any symptoms:</string>
+    <string name="detect_disease">Detect Disease</string>
+    <string name="predict_growth">Predict Growth</string>
+    <string name="enter_age_of_rabbit">Enter age of rabbit</string>
+    <string name="daily_food_amount">Daily food amount</string>
+    <string name="type_of_food_vegetables_rabbit_pellets">Type of food (vegetables / rabbit pellets)</string>
+    <string name="growth_description">The growth of a rabbit is .......</string>
 </resources>

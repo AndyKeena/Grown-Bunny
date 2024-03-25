@@ -3,6 +3,7 @@ package com.app.GrownBunny;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -123,7 +124,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 String password = register_password.getText().toString();
-//                validatePassword(password);
+                validatePassword(password);
 
             }
 
@@ -206,7 +207,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             .addOnFailureListener(e -> Toast.makeText(RegisterActivity.this,
                                                     "Registration Failed", Toast.LENGTH_SHORT).show());
 
-                                   //  Creating user in Firebase Authentication
+                                    //  Creating user in Firebase Authentication
                                     mAuth.createUserWithEmailAndPassword(email, user_password)
                                             .addOnCompleteListener(task -> {
                                                 if (task.isSuccessful()) {
@@ -218,7 +219,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                                 } else {
                                                     // If sign in fails, display a message to the user.
-                                                    Toast.makeText(RegisterActivity.this, "Authentication failed."+ task.getException().getMessage(),
+                                                    Toast.makeText(RegisterActivity.this, "Authentication failed." + task.getException().getMessage(),
                                                             Toast.LENGTH_SHORT).show();
                                                 }
                                             });
@@ -260,7 +261,7 @@ public class RegisterActivity extends AppCompatActivity {
         return m.matches();
 
     }
-}
+
     // Method for validate password
 //    public void validatePassword(String password){
 //        Pattern upperCase = Pattern.compile("[A-Z]");
@@ -293,6 +294,40 @@ public class RegisterActivity extends AppCompatActivity {
 //
 //        regBtn.setEnabled(lowerCase.matcher(password).find() && upperCase.matcher(password).find() && digitCase.matcher(password).find() && password.length() >= 8);
 //    }
+
+    public void validatePassword(String password) {
+        Pattern upperCase = Pattern.compile("[A-Z]");
+        Pattern lowerCase = Pattern.compile("[a-z]");
+        Pattern digitCase = Pattern.compile("[0-9]");
+
+        StringBuilder errorMessage = new StringBuilder();
+
+        if (!lowerCase.matcher(password).find()) {
+            errorMessage.append("Minimum one lowercase letter required.\n");
+        }
+        if (!upperCase.matcher(password).find()) {
+            errorMessage.append("Minimum one uppercase letter required.\n");
+        }
+        if (!digitCase.matcher(password).find()) {
+            errorMessage.append("Minimum one digit required.\n");
+        }
+        if (password.length()<8) {
+            errorMessage.append("Minimum 8 digits required.\n");
+        }
+
+        register_btn.setEnabled(lowerCase.matcher(password).find() && upperCase.matcher(password).find() && digitCase.matcher(password).find() && password.length() >= 8);
+
+        // Set the error message in the TextView
+        TextView errorTextView = findViewById(R.id.password_error_text);
+        errorTextView.setTextColor(Color.RED);
+        errorTextView.setText(errorMessage.toString());
+    }
+
+
+}
+
+
+
 
 //    @Override
 //    public void onBackPressed() {

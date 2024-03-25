@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_green"
+    android:background="@color/light_background_green"
     tools:context=".RegisterActivity">
 
     <LinearLayout
@@ -16,8 +16,8 @@
         >
 
         <ImageView
-            android:id="@+id/welcome_text_appname"
-            android:layout_width="250dp"
+            android:id="@+id/app_name"
+            android:layout_width="275dp"
             android:layout_height="60dp"
             android:src="@drawable/app_name"
             android:textColor="@color/black"
@@ -52,7 +52,7 @@
                 android:drawableStart="@drawable/account"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/boarder_green"
+                android:textColorHint="@color/normal_background_green"
                 android:hint="@string/name"
                 android:padding="8dp" />
 
@@ -66,7 +66,7 @@
                 android:drawableStart="@drawable/email"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/boarder_green"
+                android:textColorHint="@color/normal_background_green"
                 android:hint="@string/email"
                 android:padding="8dp" />
 
@@ -77,7 +77,7 @@
                 android:layout_marginTop="5dp"
                 app:passwordToggleEnabled="true"
                 app:hintEnabled="false"
-                app:passwordToggleTint="@color/background_green">
+                app:passwordToggleTint="@color/normal_background_green">
 
                 <EditText
                     android:id="@+id/register_password"
@@ -91,7 +91,7 @@
                     android:inputType="textPassword"
                     android:padding="8dp"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/boarder_green" />
+                    android:textColorHint="@color/normal_background_green" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -101,7 +101,7 @@
                 app:hintEnabled="false"
                 android:layout_marginTop="5dp"
 
-                app:passwordToggleTint="@color/background_green">
+                app:passwordToggleTint="@color/normal_background_green">
 
                 <EditText
                     android:id="@+id/confirm_password"
@@ -115,7 +115,7 @@
                     android:inputType="textPassword"
                     android:padding="8dp"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/boarder_green" />
+                    android:textColorHint="@color/normal_background_green" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -165,7 +165,7 @@
                 android:text="@string/register"
                 android:layout_marginTop="30dp"
                 android:textSize="16sp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:background="@drawable/green_boarder_button"/>
         </LinearLayout>
 

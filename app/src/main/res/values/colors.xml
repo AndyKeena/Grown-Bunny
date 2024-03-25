@@ -11,4 +11,8 @@
     <color name="brown">#B3630A</color>
     <color name="light_brown">#E5D3B3</color>
     <color name="yellow">#E2D86F</color>
+    <color name="light_background_green">#C0E6BA</color>
+    <color name="normal_background_green">#4CA771</color>
+    <color name="card_green"> #8DD282</color>
+
 </resources>

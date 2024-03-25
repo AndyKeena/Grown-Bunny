@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="@color/light_background_green"
+
+    android:layout_width="250dp"
+    android:layout_height="500dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/camera_gallery"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:text="@string/use_camera_or_gallery"
+        android:textColor="@color/boarder_green"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:paddingTop="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/sweet_pea_font"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp">
+
+        <ImageButton
+            android:id="@+id/camera_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="10dp"
+            android:src="@drawable/photo_camera"
+            android:layout_marginStart="50dp"
+            android:background="@color/light_background_green"/>
+
+        <ImageButton
+            android:id="@+id/gallery_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="10dp"
+            android:src="@drawable/gallery"
+            android:layout_marginStart="20dp"
+            android:background="@color/light_background_green"/>
+    </LinearLayout>
+</FrameLayout>
+
