@@ -38,6 +38,18 @@
         <activity
             android:name=".FertilizerBenefitsActivity"
             android:exported="false"/>
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".VetRegisterActivity"
+            android:exported="false"/>
+        <activity
+
+            android:name=".ContactVetActivity"
+        android:exported="false"/>
+
+
     </application>
 
 </manifest>

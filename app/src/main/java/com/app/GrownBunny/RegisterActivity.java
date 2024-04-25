@@ -311,7 +311,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (!digitCase.matcher(password).find()) {
             errorMessage.append("Minimum one digit required.\n");
         }
-        if (password.length()<8) {
+        if (password.length() < 8) {
             errorMessage.append("Minimum 8 digits required.\n");
         }
 
@@ -324,16 +324,13 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishActivity(0);
+        // Open the LoginActivity
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(intent);
+
+    }
 }
-
-
-
-
-//    @Override
-//    public void onBackPressed() {
-//        finishActivity(0);
-//        // Open the LoginActivity
-//        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-//        startActivity(intent);
-//
-//    }

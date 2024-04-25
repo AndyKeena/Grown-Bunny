@@ -4,10 +4,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FertilizerBenefitsActivity extends AppCompatActivity {
+public class VetRegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fertilizer_beneficts);
-    }
-}
+        setContentView(R.layout.activity_vet_register);
+    }   }

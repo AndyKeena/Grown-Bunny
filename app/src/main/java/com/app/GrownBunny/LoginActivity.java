@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.GrownBunny.databinding.ActivityLoginBinding;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
@@ -106,16 +105,14 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-    }
-}
-//
-//        binding.resetPwdText.setOnClickListener(view -> {
-//            Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
-//            startActivity(intent);
-//        });
-//    }
 
-//    @Override
-//    public void onBackPressed() {
-//        finishAffinity();
-//    }
+
+        binding.resetPassword.setOnClickListener(view ->
+
+        {
+            Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
+            startActivity(intent);
+        });
+    }
+
+}

@@ -35,10 +35,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         CardView growth_prediction = findViewById(R.id.growth_prediction);
         CardView disease_detection = findViewById(R.id.disease_detection);
         CardView fertilizer_benefits = findViewById(R.id.fertilizer_benefits);
+        CardView contact_vet = findViewById(R.id.contact_vet);
+
 
         growth_prediction.setOnClickListener(this);
         disease_detection.setOnClickListener(this);
         fertilizer_benefits.setOnClickListener(this);
+        contact_vet.setOnClickListener(this);
     }
 
     // Declaring what should be happened after clicking each CardView
@@ -54,11 +57,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v.getId() == R.id.fertilizer_benefits) {
             i = new Intent(this, FertilizerBenefitsActivity.class);
             startActivity(i);
+        }else if (v.getId() == R.id.contact_vet) {
+            i = new Intent(this, ContactVetActivity.class);
+            startActivity(i);
         }
     }
 
 //    @Override
 //    public void onBackPressed() {
+//        super.onBackPressed();
 //        finishAffinity();
 //    }
 }

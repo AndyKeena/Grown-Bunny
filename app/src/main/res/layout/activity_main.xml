@@ -93,7 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/growth_prediction"
-                    android:textColor="@color/boarder_green"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_marginEnd="18dp"/>
@@ -131,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/disease_detection"
-                    android:textColor="@color/boarder_green"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_marginEnd="40dp"/>
@@ -169,7 +169,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="@string/fertilizer_benefits"
-                    android:textColor="@color/boarder_green"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_marginEnd="70dp"
@@ -180,7 +180,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/connect_vet"
+            android:id="@+id/contact_vet"
             android:layout_width="340dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -209,7 +209,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="@string/contact_vet"
-                    android:textColor="@color/boarder_green"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_marginEnd="70dp"
