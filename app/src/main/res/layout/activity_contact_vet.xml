@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ContactVetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/normal_background_green">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/normal_background_green"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="275dp"-->
+            <!--                android:layout_height="64dp"-->
+            <!--                android:layout_marginTop="2dp"-->
+            <!--                android:src="@drawable/app_name_white_font">-->
+
+            <!--            </ImageView>-->
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="68dp"
+                android:layout_marginStart="-90dp"
+                android:src="@drawable/bunny">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/disease_detection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:padding="8dp"
+                android:text="@string/contact_vet"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+            <!--       -->
+
+            <!--            <ImageButton-->
+            <!--                android:id="@+id/logout_btn"-->
+            <!--                android:layout_width="50dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:clickable="true"-->
+            <!--                app:srcCompat="@drawable/baseline_logout_24" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TableLayout
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:shrinkColumns="*"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/green_box_border">
+
+            <TableRow
+                android:background="@drawable/green_box_border">
+                <TextView
+                    android:text="Name"
+                    android:textStyle="bold"
+                    android:padding="5dp"/>
+                <TextView
+                    android:text="Id"
+                    android:textStyle="bold"
+                    android:padding="5dp"/>
+                <TextView
+                    android:text="Contact number"
+                    android:textStyle="bold"
+                    android:padding="5dp"/>
+                <TextView
+                    android:text="Address"
+                    android:textStyle="bold"
+                    android:padding="5dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Andrea"
+                    android:padding="5dp"/>
+                <TextView
+                    android:text="5"
+                    android:padding="5dp"/>
+                <TextView
+                    android:text="0701136693"
+                    android:padding="5dp"/>
+                <TextView
+                     android:text="Ragama"
+                    android:padding="5dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Okeena"
+                    android:padding="5dp"/>
+                <TextView
+                    android:text="2"
+                    android:padding="5dp"/>
+                <TextView
+                    android:text="0774193090"
+                    android:padding="5dp"/>
+                <TextView
+                    android:text="Malabe"
+                    android:padding="5dp"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/vet_description"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:text="@string/contact_vet_description"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <Button
+        android:id="@+id/register_now"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="@string/register_now_vet"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:background="@drawable/green_boarder_button"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+</LinearLayout>
